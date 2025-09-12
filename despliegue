@@ -1,0 +1,26 @@
+# Nombre Docker: Sistema_Portales_Mysql
+# Nombre Red: Sistema_Portales_Red
+docker network create Sistema_Portales_Red
+# Nombre Volumen: Sistema_Portales_Data
+docker volume create Sistema_Portales_Data
+
+docker run -d \
+  --name Sistema_Portales_Mysql \
+  --network Sistema_Portales_Red \
+  --env-file .env \
+  -v Sistema_Portales_Data:/var/lib/mysql \
+  -v "$PWD"/init.sql:/docker-entrypoint-initdb.d/init.sql \
+  -p 3306:3306 \
+ alpine/mysql:15.2
+
+# Nombre Docker: Sistema_Portales_phpMyAdmin
+# Nombre Red: Sistema_Portales_Red
+# Nombre Volumen: sistema_portales_data
+
+docker run -d \
+  --name my_phpmyadmin \
+  --network mysql_net \
+  --env-file .env \
+  -e PMA_HOST=sistema_portales_mysql \
+  -p 8080:80 \
+  bitnami/phpmyadmin:5.2.2
