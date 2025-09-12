@@ -18,8 +18,8 @@ docker run -d \
 # Nombre Volumen: sistema_portales_data
 
 docker run -d \
-  --name my_phpmyadmin \
-  --network mysql_net \
+  --name Sistema_Portales_phpMyAdmin \
+  --network Sistema_Portales_Red \
   --env-file .env \
   -e PMA_HOST=sistema_portales_mysql \
   -p 8080:80 \
