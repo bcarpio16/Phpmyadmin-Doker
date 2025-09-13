@@ -21,7 +21,7 @@ docker run -d \
   --name Sistema_Portales_Mysql \
   --network Sistema_Portales_Red \
   --env-file .env \
-  -v $VOLUME:/var/lib/mysql \
+  -v Sistema_Portales_Data:/var/lib/mysql \
   -v "$PWD"/init.sql:/docker-entrypoint-initdb.d/init.sql \
   -p 3306:3306 \
   mariadb:10.11
