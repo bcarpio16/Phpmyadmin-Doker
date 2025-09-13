@@ -1,7 +1,4 @@
--- init.sql
-CREATE DATABASE IF NOT EXISTS inventario_portales;
-USE inventario_portales;
-
+-- Crear tabla portales
 CREATE TABLE IF NOT EXISTS portales (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(255) NOT NULL,
@@ -12,6 +9,7 @@ CREATE TABLE IF NOT EXISTS portales (
     fecha_actualizacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 
+-- Insertar datos iniciales
 INSERT INTO portales (nombre, url, estado, descripcion) VALUES
 ('Artes MDMQ PETRIC', 'https://ssomdmq.quito.gob.ec:4943/login', 'OK', 'Sistema de Artes MDMQ PETRIC'),
 ('CMI FRONT AMBIENTE', 'https://ssomdmq.quito.gob.ec:6450', 'OK', 'Frontal de CMI Ambiente'),
@@ -27,3 +25,6 @@ INSERT INTO portales (nombre, url, estado, descripcion) VALUES
 ('CHAT BOT SERVICIOS CIUDADANOS', 'https://sisceqcore.quito.gob.ec', 'OK', 'Chatbot para servicios ciudadanos'),
 ('Sistema Integrado de Información del Comercio', 'https://chatbot.quito.gob.ec/welcome', 'OK', 'SIIC - Sistema integrado de comercio'),
 ('SIIC Reportes', 'https://siic.quito.gob.ec', 'OK', 'Sistema de reportes del SIIC');
+
+-- Aplicar cambios de privilegios
+FLUSH PRIVILEGES;
