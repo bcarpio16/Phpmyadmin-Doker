@@ -1,26 +1,40 @@
-# Nombre Docker: Sistema_Portales_Mysql
-# Nombre Red: Sistema_Portales_Red
-docker network create Sistema_Portales_Red
-# Nombre Volumen: Sistema_Portales_Data
-docker volume create Sistema_Portales_Data
+################################################################
+#CURSO: DESPLIEGUE DE APLICACIONES CON DOCKER
+#SISTEMA DE PORTALES MARIADB Y PHPMYYADMIN
+#PROFESOR: Ing. Edison Naranjo CEC-EPN
+#FECHA: 13 Septiembre 2025
+################################################################
+#INTEGRANTES GRUPO 1 MUNICIPIO DE QUITO
+#BYRON CARPIO
+#MILTON VILLAROEL
+#EDISON MENA
+#ALEX BENAVIDES
+#MARCELO GALLARDO
+#################################################################
 
+# COPIAR PARA CREAR RED Y VOLUMEN
+  docker network create Sistema_Portales_Red
+  docker volume create Sistema_Portales_Data
+
+# COPIAR PARA DESPLEGAR MARIADB CON LA BASE DE DATOS PORTALDB
 docker run -d \
   --name Sistema_Portales_Mysql \
   --network Sistema_Portales_Red \
   --env-file .env \
-  -v Sistema_Portales_Data:/var/lib/mysql \
+  -v $VOLUME:/var/lib/mysql \
   -v "$PWD"/init.sql:/docker-entrypoint-initdb.d/init.sql \
   -p 3306:3306 \
- alpine/mysql:15.2
+  mariadb:10.11
 
-# Nombre Docker: Sistema_Portales_phpMyAdmin
-# Nombre Red: Sistema_Portales_Red
-# Nombre Volumen: sistema_portales_data
-
+# COPIAR PARA DESPLEGAR PHPMYADMIN
 docker run -d \
   --name Sistema_Portales_phpMyAdmin \
   --network Sistema_Portales_Red \
-  --env-file .env \
-  -e PMA_HOST=sistema_portales_mysql \
+  -e PMA_HOST=Sistema_Portales_Mysql \
   -p 8080:80 \
-  bitnami/phpmyadmin:5.2.2
+  phpmyadmin:5.2.2
+
+# INGRESAR EN UN NAVEGADOR
+http://localhost:8080
+Usuario: portaluser
+Contraseña: portalpass
