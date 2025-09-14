@@ -109,11 +109,16 @@ Credenciales de acceso:
 
 📋 Resumen de Comandos Importantes
 Comando	Descripción
-docker network create Sistema_Portales_Red	Crear red Docker
-docker volume create Sistema_Portales_Data	Crear volumen de datos
-docker ps	Ver contenedores en ejecución
-docker network ls	Listar redes Docker
-docker volume ls	Listar volúmenes Docker
+Crear red Docker
+docker network create Sistema_Portales_Red
+Crear volumen de datos
+docker volume create Sistema_Portales_Data	
+Ver contenedores en ejecución
+docker ps	
+Listar redes Docker
+docker network ls	
+Listar volúmenes Docker
+docker volume ls	
 🔍 Verificación del Sistema
 
 Después del despliegue, verifique que ambos contenedores estén ejecutándose correctamente:
