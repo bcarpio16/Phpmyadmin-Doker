@@ -20,7 +20,7 @@ VOLUME="Sistema_Portales_Data"
 MYSQL_CONTAINER="Sistema_Portales_Mysql"
 PHPMYADMIN_CONTAINER="Sistema_Portales_phpMyAdmin"
 MYSQL_IMAGE="mariadb:10.11"
-PHPMYADMIN_IMAGE="phpmyadmin:5.2.2"
+PHPMYADMIN_IMAGE="phpmyadmin:5.1.3"
 MYSQL_PORT=3306
 PHPMYADMIN_PORT=8080
 
