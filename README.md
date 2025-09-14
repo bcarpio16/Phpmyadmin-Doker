@@ -61,12 +61,14 @@ En el archivo despliegue se encuentran los comandos para crear la red, volumen y
 bash
 
 docker network create Sistema_Portales_Red
+
 docker volume create Sistema_Portales_Data
 
 Verificar:
 bash
 
 docker network ls
+
 docker volume ls
 
 2. Desplegar MariaDB (con base de datos portaldb)
