@@ -132,4 +132,3 @@ text
 NAMES                          STATUS              PORTS
 Sistema_Portales_phpMyAdmin   Up 5 minutes        0.0.0.0:8080->80/tcp
 Sistema_Portales_Mysql        Up 5 minutes        0.0.0.0:3306->3306/tcp
-
