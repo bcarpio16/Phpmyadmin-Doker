@@ -1,13 +1,19 @@
-################################################################
-#CURSO: DESPLIEGUE DE APLICACIONES CON DOCKER
-#SISTEMA DE PORTALES MARIADB Y PHPMYYADMIN
-#PROFESOR: Ing. Edison Naranjo CEC-EPN
-#FECHA: 13 Septiembre 2025
-################################################################
-#INTEGRANTES GRUPO 1 MUNICIPIO DE QUITO
-#Carpio Zaquinaula Byron Orlando
-#Villarroel Vera Milton Orlando
-#Mena Segura Edison Fabian
-#Benavides Freire Alex Vicente
-#Gallardo Nicolalde Marcelo Ivan
-#################################################################
+# 📦 Curso: Despliegue de Aplicaciones con Docker
+
+## 📑 Proyecto
+**Sistema de Portales con MariaDB y phpMyAdmin**
+
+- **Profesor:** Ing. Edison Naranjo (CEC-EPN)  
+- **Fecha:** 13 Septiembre 2025  
+
+---
+
+## 👨‍👩‍👦 Integrantes - Grupo 1 (Municipio de Quito)
+
+- Carpio Zaquinaula Byron Orlando  
+- Villarroel Vera Milton Orlando  
+- Mena Segura Edison Fabián  
+- Benavides Freire Alex Vicente  
+- Gallardo Nicolalde Marcelo Iván  
+
+---
