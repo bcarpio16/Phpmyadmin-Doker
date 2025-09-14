@@ -1,62 +1,70 @@
-📦 Curso: Despliegue de Aplicaciones con Docker - Sistema de Portales
-📑 Información del Proyecto
-
-Profesor: Ing. Edison Naranjo (CEC-EPN)
-Fecha: 13 Septiembre 2025
-👥 Integrantes - Grupo 1 (Municipio de Quito)
-
-    Carpio Zaquinaula Byron Orlando
-
-    Villarroel Vera Milton Orlando
-
-    Mena Segura Edison Fabián
-
-    Benavides Freire Alex Vicente
-
-    Gallardo Nicolalde Marcelo Iván
-
-🚀 Script Completo de Despliegue
-bash
-
-#!/bin/bash
-
 # 📦 Curso: Despliegue de Aplicaciones con Docker
-# 📋 Sistema de Portales con MariaDB y phpMyAdmin
 
-echo "🚀 Iniciando despliegue del Sistema de Portales..."
-echo "📅 Fecha: $(date)"
-echo "----------------------------------------"
+## 📑 Proyecto
+**Sistema de Portales con MariaDB y phpMyAdmin**
 
-# Verificar directorio actual
-echo "📂 Directorio actual:"
+- **Profesor:** Ing. Edison Naranjo (CEC-EPN)  
+- **Fecha:** 13 Septiembre 2025  
+
+---
+
+## 👨‍👩‍👦 Integrantes - Grupo 1 (Municipio de Quito)
+
+- Carpio Zaquinaula Byron Orlando  
+- Villarroel Vera Milton Orlando  
+- Mena Segura Edison Fabián  
+- Benavides Freire Alex Vicente  
+- Gallardo Nicolalde Marcelo Iván  
+
+---
+
+## 🖥️ Clonado del Repositorio
+
+```bash
 pwd
+/home/netadmin
 
-# Clonar el repositorio
-echo "🔽 Clonando repositorio..."
 git clone https://github.com/panivinux/Phpmyadmin-Doker.git
 
-# Navegar al directorio del proyecto
-cd Phpmyadmin-Doker
+Salida esperada:
 
-# Listar archivos del proyecto
-echo "📋 Archivos del proyecto:"
+Clonando en 'Phpmyadmin-Doker'...
+remote: Enumerating objects: 54, done.
+remote: Counting objects: 100% (54/54), done.
+
+📂 Archivos del Proyecto
+
+Dentro de la carpeta clonada Phpmyadmin-Doker:
+
 ls -la
 
-# Crear red Docker
-echo "🌐 Creando red Docker..."
-docker network create Sistema_Portales_Red
+Salida esperada:
 
-# Crear volumen para persistencia de datos
-echo "💾 Creando volumen de datos..."
+total 32
+drwxrwxr-x  3 netadmin netadmin 4096 sep 13 20:12 .
+drwxr-x--- 37 netadmin netadmin 4096 sep 13 20:12 ..
+-rw-rw-r--  1 netadmin netadmin 1270 sep 13 20:12 despliegue
+-rw-rw-r--  1 netadmin netadmin  128 sep 13 20:12 .env
+drwxrwxr-x  8 netadmin netadmin 4096 sep 13 20:12 .git
+-rw-rw-r--  1 netadmin netadmin 2044 sep 13 20:12 init.sql
+-rw-rw-r--  1 netadmin netadmin 2108 sep 13 20:12 levantar_sistema_portales.sh
+-rw-rw-r--  1 netadmin netadmin  452 sep 13 20:12 README.md
+
+🚀 Despliegue Manual
+
+En el archivo despliegue se encuentran los comandos para crear la red, volumen y desplegar los contenedores MariaDB y phpMyAdmin.
+1. Crear Red y Volumen
+
+docker network create Sistema_Portales_Red
 docker volume create Sistema_Portales_Data
 
-# Verificar creación
-echo "🔍 Verificando red y volumen creados:"
-docker network ls | grep Sistema_Portales_Red
-docker volume ls | grep Sistema_Portales_Data
+Verificar:
 
-# Desplegar MariaDB
-echo "🐬 Desplegando MariaDB..."
+docker network ls
+docker volume ls
+
+2. Desplegar MariaDB (con base de datos portaldb)
+
 docker run -d \
   --name Sistema_Portales_Mysql \
   --network Sistema_Portales_Red \
@@ -66,16 +74,12 @@ docker run -d \
   -p 3306:3306 \
   mariadb:10.11
 
-# Esperar a que MariaDB se inicie completamente
-echo "⏳ Esperando inicialización de MariaDB..."
-sleep 10
+Verificar que el contenedor está en ejecución:
 
-# Verificar contenedor MariaDB
-echo "🔍 Verificando estado de MariaDB:"
-docker ps | grep Sistema_Portales_Mysql
+docker ps
 
-# Desplegar phpMyAdmin
-echo "🌐 Desplegando phpMyAdmin..."
+3. Desplegar phpMyAdmin
+
 docker run -d \
   --name Sistema_Portales_phpMyAdmin \
   --network Sistema_Portales_Red \
@@ -83,80 +87,14 @@ docker run -d \
   -p 8080:80 \
   phpmyadmin:5.1.3
 
-# Verificar contenedores
-echo "🔍 Verificando estado de todos los contenedores:"
-docker ps --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}"
+4. Acceso vía Navegador
 
-# Mostrar información de acceso
-echo "----------------------------------------"
-echo "🎉 ¡Despliegue completado!"
-echo "----------------------------------------"
-echo "📊 ACCESO AL SISTEMA:"
-echo "URL: http://localhost:8080"
-echo "Usuario: portaluser"
-echo "Contraseña: portalpass"
-echo "----------------------------------------"
-echo "📊 PUERTOS:"
-echo "MySQL: 3306"
-echo "phpMyAdmin: 8080"
-echo "----------------------------------------"
+Abrir en el navegador:
 
-# Verificar logs iniciales
-echo "📝 Logs iniciales de MariaDB:"
-docker logs Sistema_Portales_Mysql | tail -10
+http://localhost:8080
 
-echo "📝 Logs iniciales de phpMyAdmin:"
-docker logs Sistema_Portales_phpMyAdmin | tail -5
+Credenciales de acceso:
 
-echo "✅ Script de despliegue finalizado."
+    Usuario: portaluser
 
-📋 Comandos Adicionales de Verificación y Gestión
-bash
-
-# Verificar estado detallado de los contenedores
-docker ps -a --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}"
-
-# Ver logs en tiempo real
-docker logs -f Sistema_Portales_Mysql
-docker logs -f Sistema_Portales_phpMyAdmin
-
-# Acceder a la consola de MariaDB
-docker exec -it Sistema_Portales_Mysql mysql -u portaluser -pportalpass portaldb
-
-# Detener contenedores
-docker stop Sistema_Portales_Mysql Sistema_Portales_phpMyAdmin
-
-# Iniciar contenedores detenidos
-docker start Sistema_Portales_Mysql Sistema_Portales_phpMyAdmin
-
-# Eliminar contenedores
-docker rm Sistema_Portales_Mysql Sistema_Portales_phpMyAdmin
-
-# Eliminar red y volumen (¡CUIDADO: elimina todos los datos!)
-docker network rm Sistema_Portales_Red
-docker volume rm Sistema_Portales_Data
-
-📝 Estructura del Proyecto
-text
-
-Phpmyadmin-Doker/
-├── despliegue          # Script de despliegue
-├── .env               # Variables de entorno (usuario: portaluser, contraseña: portalpass)
-├── init.sql           # Script de inicialización de la base de datos
-├── levantar_sistema_portales.sh  # Script de inicio
-└── README.md          # Documentación
-
-🔧 Solución de Problemas Comunes
-bash
-
-# Si el puerto 8080 está en uso, cambiar por otro puerto:
-# Editar el script cambiando -p 8080:80 por -p 8081:80 o otro puerto disponible
-
-# Si los contenedores no se inician correctamente:
-docker logs Sistema_Portales_Mysql  # Ver errores de MariaDB
-docker logs Sistema_Portales_phpMyAdmin  # Ver errores de phpMyAdmin
-
-# Si hay problemas de conexión entre contenedores:
-docker network inspect Sistema_Portales_Red
-
-¡Sistema desplegado exitosamente! 🎉
+    Contraseña: portalpass
