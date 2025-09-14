@@ -93,6 +93,9 @@ Usuario: portaluser
 
 Contraseña: portalpass
 
+<img width="1249" height="745" alt="imagen" src="https://github.com/user-attachments/assets/3406aa5d-84a9-4d5a-9690-2b2b6cd3c4a6" />
+
+
 
 
 
