@@ -42,11 +42,17 @@ bash
 ls -la
 
  despliegue
+ 
  .env
+ 
  .git
+
  init.sql
+ 
  levantar_sistema_portales.sh
+ 
  README.md
+ 
 
 🚀 Despliegue Manual
 
