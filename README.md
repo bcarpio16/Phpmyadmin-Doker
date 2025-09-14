@@ -85,6 +85,7 @@ docker run -d \
   -e PMA_HOST=Sistema_Portales_Mysql \
   -p 8080:80 \
   phpmyadmin:5.1.3
+
 4. Acceso vía Navegador
 http://localhost:8080
 Credenciales de acceso:
