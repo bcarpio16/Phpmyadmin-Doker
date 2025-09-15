@@ -32,10 +32,10 @@
 
 ## 🖥️ Clonado del Repositorio de cualquiera de las 5 cuentas de github
 
-```bash
+```
 pwd
 /home/netadmin
-```bash
+```
 
 - Carpio Zaquinaula Byron Orlando
 git clone https://github.com/bcarpio16/Phpmyadmin-Doker
