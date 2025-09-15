@@ -30,13 +30,20 @@
 
 ---
 
-## 🖥️ Clonado del Repositorio
+## 🖥️ Clonado del Repositorio de cualquiera de las 5 cuentas de github
 
 ```bash
 pwd
 /home/netadmin
 
+- Carpio Zaquinaula Byron Orlando
+- Villarroel Vera Milton Orlando
+- Mena Segura Edison Fabián
 git clone https://github.com/panivinux/Phpmyadmin-Doker.git
+- Benavides Freire Alex Vicente
+- Gallardo Nicolalde Marcelo Iván  
+git clone https://github.com/panivinux/Phpmyadmin-Doker.git
+
 
 Salida esperada:
 
