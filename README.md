@@ -113,7 +113,8 @@ Credenciales de acceso:
 
 🚀 Despliegue mediante el script levantar_sistema_portales.sh
 
-netadmin   main  ~  despliegues  Phpmyadmin-Doker  bash levantar_sistema_portales.sh 
+netadmin   main  ~  despliegues  Phpmyadmin-Doker 
+bash levantar_sistema_portales.sh 
 Creando red: Sistema_Portales_Red
 ea837363cf4ccf04123720a7500ad766c33866e01075d36868496190cfadaa51
 Creando volumen: Sistema_Portales_Data
