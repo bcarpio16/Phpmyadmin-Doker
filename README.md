@@ -39,11 +39,11 @@ pwd
 
 - Carpio Zaquinaula Byron Orlando
 ```  
-git clone https://github.com/bcarpio16/Phpmyadmin-Doker
+git clone https://github.com/bcarpio16/Phpmyadmin-Doker.git
 ```
 - Villarroel Vera Milton Orlando
 ```
-git clone https://github.com/movillarroel/Phpmyadmin-Doker
+git clone https://github.com/movillarroel/Phpmyadmin-Doker.git
 ```
 - Mena Segura Edison Fabián
 ```
