@@ -147,20 +147,16 @@ ea837363cf4ccf04123720a7500ad766c33866e01075d36868496190cfadaa51
 Creando volumen: Sistema_Portales_Data
 Sistema_Portales_Data
 Levantando contenedor MariaDB...
-Unable to find image 'mariadb:10.11' locally
-10.11: Pulling from library/mariadb
-
 Digest: sha256:e4ad7c5ad8874c2b049cef7566ccf534856b9fcde1c3c89c3251e8fa6fd6915c
 Status: Downloaded newer image for mariadb:10.11
 eeed5a3778baf4654a9417245ba447000bb08b09abe02d5108a7e5b07f25a866
-Levantando contenedor phpMyAdmin...
-Unable to find image 'phpmyadmin:5.1.3' locally
-5.1.3: Pulling from library/phpmyadmin
 
+Levantando contenedor phpMyAdmin...
 Digest: sha256:cfeae858a1689af32024fa5f797bfeb6eadb79a94fed71aa90265788224b7303
 Status: Downloaded newer image for phpmyadmin:5.1.3
 6c75967a920a07448b40d6cc82cc8f5ad233139f3d51ff73502f835c77c94a73
 [OK] Sistema levantado correctamente.
+
 ----------------------------------------
 Base de datos: portaldb
 Usuario: portaluser
@@ -168,7 +164,6 @@ Contraseña: portalpass
 MariaDB: localhost:3306
 phpMyAdmin: http://localhost:8080
 ----------------------------------------
-
 ```
 
 
