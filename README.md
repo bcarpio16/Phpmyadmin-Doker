@@ -37,10 +37,13 @@ pwd
 /home/netadmin
 
 - Carpio Zaquinaula Byron Orlando
+git clone https://github.com/bcarpio16/Phpmyadmin-Doker
 - Villarroel Vera Milton Orlando
+git clone https://github.com/movillarroel/Phpmyadmin-Doker
 - Mena Segura Edison Fabián
 git clone https://github.com/panivinux/Phpmyadmin-Doker.git
 - Benavides Freire Alex Vicente
+https://github.com/abenavides86/Phpmyadmin-Doker.git
 - Gallardo Nicolalde Marcelo Iván  
 git clone https://github.com/panivinux/Phpmyadmin-Doker.git
 
@@ -55,7 +58,9 @@ remote: Counting objects: 100% (54/54), done.
 
 Dentro de la carpeta clonada Phpmyadmin-Doker:
 
+´´´
 ls -la
+´´´
 
 Salida esperada:
 
