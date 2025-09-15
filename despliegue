@@ -12,11 +12,11 @@
 #Gallardo Nicolalde Marcelo Ivan
 #################################################################
 
-# COPIAR PARA CREAR RED Y VOLUMEN
+# CREAR RED Y VOLUMEN
   docker network create Sistema_Portales_Red
   docker volume create Sistema_Portales_Data
 
-# COPIAR PARA DESPLEGAR MARIADB CON LA BASE DE DATOS PORTALDB
+# DESPLEGAR MARIADB CON LA BASE DE DATOS PORTALDB
 docker run -d \
   --name Sistema_Portales_Mysql \
   --network Sistema_Portales_Red \
@@ -26,7 +26,7 @@ docker run -d \
   -p 3306:3306 \
   mariadb:10.11
 
-# COPIAR PARA DESPLEGAR PHPMYADMIN
+# DESPLEGAR PHPMYADMIN
 docker run -d \
   --name Sistema_Portales_phpMyAdmin \
   --network Sistema_Portales_Red \
