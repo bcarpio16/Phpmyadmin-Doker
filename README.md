@@ -66,23 +66,12 @@ remote: Counting objects: 100% (54/54), done.
 
 📂 Archivos del Proyecto
 
-Dentro de la carpeta clonada Phpmyadmin-Doker:
-
-```
-ls -la
-```
-
-Salida esperada:
-
-total 32
-drwxrwxr-x  3 netadmin netadmin 4096 sep 13 20:12 .
-drwxr-x--- 37 netadmin netadmin 4096 sep 13 20:12 ..
--rw-rw-r--  1 netadmin netadmin 1270 sep 13 20:12 despliegue
--rw-rw-r--  1 netadmin netadmin  128 sep 13 20:12 .env
-drwxrwxr-x  8 netadmin netadmin 4096 sep 13 20:12 .git
--rw-rw-r--  1 netadmin netadmin 2044 sep 13 20:12 init.sql
--rw-rw-r--  1 netadmin netadmin 2108 sep 13 20:12 levantar_sistema_portales.sh
--rw-rw-r--  1 netadmin netadmin  452 sep 13 20:12 README.md
+sistema-portales/
+│── despliegue 
+│── .env
+│── init.sql
+│── levantar_sistema_portales.sh
+│── README.md
 
 🚀 Despliegue Manual
 
@@ -141,7 +130,11 @@ Credenciales de acceso:
 
 ```
 bash levantar_sistema_portales.sh 
+```
 
+Resultrado esperado 
+
+```
 Creando red: Sistema_Portales_Red
 ea837363cf4ccf04123720a7500ad766c33866e01075d36868496190cfadaa51
 Creando volumen: Sistema_Portales_Data
