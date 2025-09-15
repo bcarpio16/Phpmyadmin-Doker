@@ -111,3 +111,59 @@ Credenciales de acceso:
 
     Contraseña: portalpass
 
+🚀 Despliegue mediante el script levantar_sistema_portales.sh
+
+netadmin   main  ~  despliegues  Phpmyadmin-Doker  bash levantar_sistema_portales.sh 
+Creando red: Sistema_Portales_Red
+ea837363cf4ccf04123720a7500ad766c33866e01075d36868496190cfadaa51
+Creando volumen: Sistema_Portales_Data
+Sistema_Portales_Data
+Levantando contenedor MariaDB...
+Unable to find image 'mariadb:10.11' locally
+10.11: Pulling from library/mariadb
+60d98d907669: Pull complete 
+99d06c66f898: Pull complete 
+1427991e2f34: Pull complete 
+d37470673b78: Pull complete 
+7197601ade72: Pull complete 
+1cb464ad4e0a: Pull complete 
+b0c286c50b3b: Pull complete 
+19683e685d48: Pull complete 
+Digest: sha256:e4ad7c5ad8874c2b049cef7566ccf534856b9fcde1c3c89c3251e8fa6fd6915c
+Status: Downloaded newer image for mariadb:10.11
+eeed5a3778baf4654a9417245ba447000bb08b09abe02d5108a7e5b07f25a866
+Levantando contenedor phpMyAdmin...
+Unable to find image 'phpmyadmin:5.1.3' locally
+5.1.3: Pulling from library/phpmyadmin
+1fe172e4850f: Pull complete 
+012a3732d045: Pull complete 
+43092314d50d: Pull complete 
+4f615e42d863: Pull complete 
+cd39010a4efc: Pull complete 
+d983c9ce24de: Pull complete 
+ecbdd59ae430: Pull complete 
+c32d4d691316: Pull complete 
+78dad915f3c5: Pull complete 
+6ed225542da8: Pull complete 
+17395f560cc6: Pull complete 
+7dbc0cb2b468: Pull complete 
+030ee96243f3: Pull complete 
+a85d6f0c87c7: Pull complete 
+670a38c92a34: Pull complete 
+ad8a5dd9f615: Pull complete 
+85c57a813b81: Pull complete 
+245dbe7b7ebe: Pull complete 
+Digest: sha256:cfeae858a1689af32024fa5f797bfeb6eadb79a94fed71aa90265788224b7303
+Status: Downloaded newer image for phpmyadmin:5.1.3
+6c75967a920a07448b40d6cc82cc8f5ad233139f3d51ff73502f835c77c94a73
+[OK] Sistema levantado correctamente.
+----------------------------------------
+Base de datos: portaldb
+Usuario: portaluser
+Contraseña: portalpass
+MariaDB: localhost:3306
+phpMyAdmin: http://localhost:8080
+----------------------------------------
+
+
+
