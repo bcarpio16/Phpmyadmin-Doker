@@ -38,16 +38,25 @@ pwd
 ```
 
 - Carpio Zaquinaula Byron Orlando
+```  
 git clone https://github.com/bcarpio16/Phpmyadmin-Doker
+```
 - Villarroel Vera Milton Orlando
+```
 git clone https://github.com/movillarroel/Phpmyadmin-Doker
+```
 - Mena Segura Edison Fabián
+```
 git clone https://github.com/panivinux/Phpmyadmin-Doker.git
+```
 - Benavides Freire Alex Vicente
+```
 https://github.com/abenavides86/Phpmyadmin-Doker.git
+```
 - Gallardo Nicolalde Marcelo Iván  
+```
 git clone https://github.com/panivinux/Phpmyadmin-Doker.git
-
+```
 
 Salida esperada:
 
@@ -59,9 +68,9 @@ remote: Counting objects: 100% (54/54), done.
 
 Dentro de la carpeta clonada Phpmyadmin-Doker:
 
-´´´
+```
 ls -la
-´´´
+```
 
 Salida esperada:
 
@@ -79,17 +88,21 @@ drwxrwxr-x  8 netadmin netadmin 4096 sep 13 20:12 .git
 
 En el archivo despliegue se encuentran los comandos para crear la red, volumen y desplegar los contenedores MariaDB y phpMyAdmin.
 1. Crear Red y Volumen
-
+```
 docker network create Sistema_Portales_Red
+```
+```
 docker volume create Sistema_Portales_Data
-
+```
 Verificar:
-
+```
 docker network ls
+```
+```
 docker volume ls
-
+```
 2. Desplegar MariaDB (con base de datos portaldb)
-
+```
 docker run -d \
   --name Sistema_Portales_Mysql \
   --network Sistema_Portales_Red \
@@ -98,20 +111,20 @@ docker run -d \
   -v "$PWD"/init.sql:/docker-entrypoint-initdb.d/init.sql \
   -p 3306:3306 \
   mariadb:10.11
-
+```
 Verificar que el contenedor está en ejecución:
-
+```
 docker ps
-
+```
 3. Desplegar phpMyAdmin
-
+```
 docker run -d \
   --name Sistema_Portales_phpMyAdmin \
   --network Sistema_Portales_Red \
   -e PMA_HOST=Sistema_Portales_Mysql \
   -p 8080:80 \
   phpmyadmin:5.1.3
-
+```
 4. Acceso vía Navegador
 
 Abrir en el navegador:
@@ -127,7 +140,9 @@ Credenciales de acceso:
 🚀 Despliegue mediante el script levantar_sistema_portales.sh
 
 netadmin   main  ~  despliegues  Phpmyadmin-Doker 
+```
 bash levantar_sistema_portales.sh 
+```
 Creando red: Sistema_Portales_Red
 ea837363cf4ccf04123720a7500ad766c33866e01075d36868496190cfadaa51
 Creando volumen: Sistema_Portales_Data
