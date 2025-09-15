@@ -35,6 +35,7 @@
 ```bash
 pwd
 /home/netadmin
+```bash
 
 - Carpio Zaquinaula Byron Orlando
 git clone https://github.com/bcarpio16/Phpmyadmin-Doker
