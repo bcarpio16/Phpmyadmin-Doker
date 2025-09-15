@@ -155,8 +155,8 @@ Levantando contenedor phpMyAdmin...
 Digest: sha256:cfeae858a1689af32024fa5f797bfeb6eadb79a94fed71aa90265788224b7303
 Status: Downloaded newer image for phpmyadmin:5.1.3
 6c75967a920a07448b40d6cc82cc8f5ad233139f3d51ff73502f835c77c94a73
-[OK] Sistema levantado correctamente.
 
+[OK] Sistema levantado correctamente.
 ----------------------------------------
 Base de datos: portaldb
 Usuario: portaluser
