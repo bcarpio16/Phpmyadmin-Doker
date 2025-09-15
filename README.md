@@ -64,14 +64,13 @@ Clonando en 'Phpmyadmin-Doker'...
 remote: Enumerating objects: 54, done.
 remote: Counting objects: 100% (54/54), done.
 
-📂 Archivos del Proyecto
+📂 Archivos del Proyecto: **Phpmyadmin-Doker**
 
-sistema-portales/
-│── despliegue 
-│── .env
-│── init.sql
-│── levantar_sistema_portales.sh
-│── README.md
+│── despliegue   
+│── .env  
+│── init.sql  
+│── levantar_sistema_portales.sh  
+│── README.md  
 
 🚀 Despliegue Manual
 
