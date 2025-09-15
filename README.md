@@ -47,7 +47,7 @@ git clone https://github.com/movillarroel/Phpmyadmin-Doker.git
 ```
 - Mena Segura Edison Fabián
 ```
-git clone https://github.com/panivinux/Phpmyadmin-Doker.git
+git clone https://github.com/Bulls1168-C/Phpmyadmin-Docker.git
 ```
 - Benavides Freire Alex Vicente
 ```
